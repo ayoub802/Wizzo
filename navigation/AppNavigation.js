@@ -7,6 +7,10 @@ import ChoixInter1 from '../screens/OnBoarding/ChoixInter1'
 import ChoixInter2 from '../screens/OnBoarding/ChoixInter2'
 import OnBoardin1 from '../screens/OnBoarding/OnBoarding1'
 import Login from '../screens/Account/Login'
+import Inscriptions from '../screens/Account/Inscriptions'
+import Verification from '../screens/Account/Verification'
+import ResetPassword from '../screens/Account/ResetPassword'
+import ProfileScreen from '../screens/Profile/ProfileScreen'
 
 
 const AppNavigation = () => {
@@ -15,7 +19,7 @@ const AppNavigation = () => {
   return (
     
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='OnBorading' screenOptions={{
+        <Stack.Navigator initialRouteName='ProfileScreen' screenOptions={{
             headerShown: false
         }}>
             <Stack.Screen name='OnBorading' component={OnBoarding}/>
@@ -23,6 +27,10 @@ const AppNavigation = () => {
             <Stack.Screen name='Choix2' component={ChoixInter2}/>
             <Stack.Screen name='OnBorading1' component={OnBoardin1}/>
             <Stack.Screen name='Login' component={Login}/>
+            <Stack.Screen name='Inscription' component={Inscriptions}/>
+            <Stack.Screen name='Verification' component={Verification}/>
+            <Stack.Screen name='ResetPassword' component={ResetPassword}/>
+            <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
         </Stack.Navigator>
      </NavigationContainer>
   )

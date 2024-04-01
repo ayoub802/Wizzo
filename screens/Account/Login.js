@@ -1,5 +1,5 @@
 import { View, Text, Image, StatusBar, Dimensions, ScrollView, PixelRatio, TextInput, Touchable, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { FacebookIcon, GoogleIcon, LogoWizzy, Shape1, Shape2, Shape3 } from '../../constant/image';
 import Message from "../../assets/icons/message.png"
@@ -8,11 +8,15 @@ import hide from "../../assets/icons/hide.png"
 import { COLORS, FONTFAMILY } from '../../styles/Global';
 import Svg, { SvgUri } from 'react-native-svg';
 import ButtonBig from '../../components/buttons/ButtonBig';
+import SwitchToggle from "react-native-switch-toggle";
+
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 const Login = ({ navigation }) => {
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
+    const [on, setOn] = useState(false)
+
   return (
     <View style={{flex: 1, backgroundColor: "#fff", position: "relative"}}>
 
@@ -97,6 +101,31 @@ const Login = ({ navigation }) => {
                             </View>
 
                         </View>
+                        <View style={{marginTop: windowWidth * 0.06, flexDirection: "row", justifyContent: "space-between"}}>
+                            <View style={{flexDirection: "row", alignItems: "center", gap: 5}}>
+                            <SwitchToggle
+                                switchOn={on}
+                                onPress={() => setOn(!on)}
+                                circleColorOff={COLORS.primary}
+                                circleColorOn={COLORS.white}
+                                backgroundColorOn={COLORS.primary}
+                                backgroundColorOff={COLORS.borderColor}
+                                containerStyle={{
+                                    width: 50,
+                                    height: 23,
+                                    borderRadius: 25,
+                                    padding: 4,
+                                }}
+                                circleStyle={{
+                                    width: 18,
+                                    height: 18,
+                                    borderRadius: 20,
+                                }}
+                                />
+                            <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary}}>Rester connecté</Text>
+                            </View>
+                           <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary}}>Mot de passe oublié ?</Text>
+                        </View>
 
                         <View style={{width: windowWidth * 0.7, alignSelf: "center", marginTop: windowWidth * 0.1}}>
                             <ButtonBig title={"Se connecter"}/>
@@ -118,7 +147,7 @@ const Login = ({ navigation }) => {
                         </View>
                         <View style={{ marginTop: windowWidth * 0.05, flexDirection: "row",  gap: 8}}>
                             <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(15)}}>Par encore de compte ?</Text>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('Inscription')}>
                                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary, fontSize: getFontSize(15)}}>Créer votre compte</Text>
                             </TouchableOpacity>
                         </View>

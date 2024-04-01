@@ -24,6 +24,7 @@ import ViandIcon from "../assets/Images/ViandIcon.png"
 import ViandIconBlue from "../assets/Images/ViandIconBlue.png"
 import GoogleIcon from "../assets/icons/google.png"
 import FacebookIcon from "../assets/icons/facebook.png"
+import ProfileUser from "../assets/Images/profile.png"
 export {
     LogoWizzy,
     Shape1,
@@ -50,5 +51,6 @@ export {
     ViandIcon,
     ViandIconBlue,
     GoogleIcon,
-    FacebookIcon
+    FacebookIcon,
+    ProfileUser
 }
