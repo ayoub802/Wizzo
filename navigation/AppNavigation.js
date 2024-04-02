@@ -13,6 +13,7 @@ import ResetPassword from '../screens/Account/ResetPassword'
 import ProfileScreen from '../screens/Profile/ProfileScreen'
 import UpdateProfileScreen from '../screens/Profile/UpdateProfileScreen'
 import Notification from '../screens/Notification/Notification'
+import Annuaire from '../screens/Annuaire/Annuaire'
 
 
 const AppNavigation = () => {
@@ -21,7 +22,7 @@ const AppNavigation = () => {
   return (
     
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='Notification' screenOptions={{
+        <Stack.Navigator initialRouteName='Annuaire' screenOptions={{
             headerShown: false
         }}>
             <Stack.Screen name='OnBorading' component={OnBoarding}/>
@@ -35,6 +36,7 @@ const AppNavigation = () => {
             <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
             <Stack.Screen name='UpdateProfileScreen' component={UpdateProfileScreen}/>
             <Stack.Screen name='Notification' component={Notification}/>
+            <Stack.Screen name='Annuaire' component={Annuaire}/>
         </Stack.Navigator>
      </NavigationContainer>
   )

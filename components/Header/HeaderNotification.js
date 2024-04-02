@@ -4,7 +4,7 @@ import { Appbar } from 'react-native-paper';
 import { COLORS, FONTFAMILY } from '../../styles/Global';
 import Fontisto from "react-native-vector-icons/Fontisto"
 import Feather from "react-native-vector-icons/Feather"
-const HeaderNotification = ({ title, isDisplay = true }) => {
+const HeaderNotification = ({ title, isDisplay = true, colorIcon }) => {
   return (
     <Appbar.Header>
         <Appbar.BackAction onPress={() => {}}/>
@@ -14,7 +14,7 @@ const HeaderNotification = ({ title, isDisplay = true }) => {
           ?
           <View style={{ flexDirection: 'row', gap: -10 }}>
                 <Appbar.Action icon={({ color, size }) => (
-                    <Fontisto name={"bell"} color={COLORS.primary} size={size} style={{ marginHorizontal: 0 }} />
+                    <Fontisto name={"bell"} color={colorIcon} size={size} style={{ marginHorizontal: 0 }} />
                     )} 
                     onPress={() => {}} />
             </View>

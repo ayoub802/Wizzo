@@ -31,6 +31,7 @@ import NotificationNone from "../assets/Images/NotoficationNone.png"
 import Notification1 from "../assets/Images/notification_1.png"
 import Notification2 from "../assets/Images/notification_2.png"
 import Notification3 from "../assets/Images/notification_3.png"
+import SearchIcon from "../assets/icons/search.png"
 export {
     LogoWizzy,
     Shape1,
@@ -64,5 +65,6 @@ export {
     NotificationNone,
     Notification1,
     Notification2,
-    Notification3
+    Notification3,
+    SearchIcon
 }

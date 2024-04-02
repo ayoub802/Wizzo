@@ -1,5 +1,5 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, Notification1, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
+import { AnimalIcon, AnimalIconBlue, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
 
 export const categories = [
     {
@@ -152,6 +152,47 @@ export const NotificationData = [
         phone: "03.26.27.28.29",
         site: "www.monsite.fr",
         date: "Maintenant",
-        img: Notification1
-    }
+        img: Notification1,
+        buttonText: "En savoir plus"
+    },
+    {
+        id: 2,
+        title: "Foire champenoise",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.foirechampenois.info",
+        date: "Il y a 1h",
+        img: Notification2,
+        buttonText: "En savoir plus"
+    },
+    {
+        id: 3,
+        title: "La lunetterie",
+        address: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        // phone: "03.26.27.28.29",
+        // site: "www.foirechampenois.info",
+        date: "Il y a 1 jour",
+        img: Notification3,
+        buttonText: "En profiter"
+    },
+    {
+        id: 4,
+        title: "Fête de la lunette",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.monsite.fr",
+        date: "Maintenant",
+        img: Notification1,
+        buttonText: "En savoir plus"
+    },
+    {
+        id: 5,
+        title: "Foire champenoise",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.foirechampenois.info",
+        date: "Il y a 1h",
+        img: Notification2,
+        buttonText: "En savoir plus"
+    },
 ]

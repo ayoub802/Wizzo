@@ -1,5 +1,5 @@
-import { View, Text, ScrollView, Image, PixelRatio, FlatList, Dimensions } from 'react-native'
-import React from 'react'
+import { View, Text, ScrollView, Image, PixelRatio, FlatList, Dimensions, StatusBar } from 'react-native'
+import React, { useEffect } from 'react'
 import HeaderNotification from '../../components/Header/HeaderNotification'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { NotificationNone } from '../../constant/image'
@@ -10,6 +10,11 @@ import NotifcationCard from '../../components/Cards/NotifcationCard'
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 const Notification = () => {
+
+  useEffect(() => {
+   StatusBar.setBackgroundColor("#fff")
+   StatusBar.setBarStyle('dark-content')
+  }, [])
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
 
@@ -38,8 +43,8 @@ const Notification = () => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: "#fff"}}>
           <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
-                    <HeaderNotification title={"Notifications"}/>
-                <View style={{flex: 1, width: windowWidth * 0.9, alignSelf: "center"}}>
+                    <HeaderNotification title={"Notifications"} colorIcon={COLORS.redColor}/>
+                <View style={{flex: 1, width: windowWidth * 0.9, alignSelf: "center", marginTop: windowWidth * 0.05}}>
                   <FlatList 
                     data={NotificationData}
                     keyExtractor={item => item.id}
