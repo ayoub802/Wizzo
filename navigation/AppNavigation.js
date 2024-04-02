@@ -11,6 +11,8 @@ import Inscriptions from '../screens/Account/Inscriptions'
 import Verification from '../screens/Account/Verification'
 import ResetPassword from '../screens/Account/ResetPassword'
 import ProfileScreen from '../screens/Profile/ProfileScreen'
+import UpdateProfileScreen from '../screens/Profile/UpdateProfileScreen'
+import Notification from '../screens/Notification/Notification'
 
 
 const AppNavigation = () => {
@@ -19,7 +21,7 @@ const AppNavigation = () => {
   return (
     
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='ProfileScreen' screenOptions={{
+        <Stack.Navigator initialRouteName='Notification' screenOptions={{
             headerShown: false
         }}>
             <Stack.Screen name='OnBorading' component={OnBoarding}/>
@@ -31,6 +33,8 @@ const AppNavigation = () => {
             <Stack.Screen name='Verification' component={Verification}/>
             <Stack.Screen name='ResetPassword' component={ResetPassword}/>
             <Stack.Screen name='ProfileScreen' component={ProfileScreen}/>
+            <Stack.Screen name='UpdateProfileScreen' component={UpdateProfileScreen}/>
+            <Stack.Screen name='Notification' component={Notification}/>
         </Stack.Navigator>
      </NavigationContainer>
   )

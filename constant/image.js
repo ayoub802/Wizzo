@@ -25,6 +25,12 @@ import ViandIconBlue from "../assets/Images/ViandIconBlue.png"
 import GoogleIcon from "../assets/icons/google.png"
 import FacebookIcon from "../assets/icons/facebook.png"
 import ProfileUser from "../assets/Images/profile.png"
+import Coup1 from "../assets/Images/coup_1.png"
+import Coup2 from "../assets/Images/coup_2.png"
+import NotificationNone from "../assets/Images/NotoficationNone.png"
+import Notification1 from "../assets/Images/notification_1.png"
+import Notification2 from "../assets/Images/notification_2.png"
+import Notification3 from "../assets/Images/notification_3.png"
 export {
     LogoWizzy,
     Shape1,
@@ -52,5 +58,11 @@ export {
     ViandIconBlue,
     GoogleIcon,
     FacebookIcon,
-    ProfileUser
+    ProfileUser,
+    Coup1,
+    Coup2,
+    NotificationNone,
+    Notification1,
+    Notification2,
+    Notification3
 }

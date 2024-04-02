@@ -1,5 +1,5 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, AutoIcon, AutoIconBlue, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
+import { AnimalIcon, AnimalIconBlue, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, Notification1, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
 
 export const categories = [
     {
@@ -72,4 +72,86 @@ export const categories = [
         iconBlue: MotoIconBlue,
         color: COLORS.primary
     },
+]
+
+export const intert = [
+    {
+        id: 1,
+        title: "Auto", 
+        color: "#6B7AED"
+    },
+    {
+        id: 2,
+        title: "Animaux", 
+        color: "#EE544A"
+    },
+    {
+        id: 3,
+        title: "Economie", 
+        color: "#FF8D5D"
+    },
+    {
+        id: 4,
+        title: "Art", 
+        color: "#7D67EE"
+    },
+    {
+        id: 5,
+        title: "Resto", 
+        color: "#29D697"
+    },
+    {
+        id: 6,
+        title: "Autres", 
+        color: "#39D1F2"
+    },
+]
+
+export const coups = [
+    {
+        id: 1,
+        title: "La lunetterie",
+        date: "18 mars",
+        description: "Quibus ita sceleste patratis Paulus cruore perfusus ",
+        img: Coup1
+    },
+    {
+        id: 2,
+        title: "Angelina Zolly",
+        date: "10 mars",
+        description: "Quibus ita sceleste patratis Paulus cruore perfusus ",
+        img: Coup2
+    },
+]
+
+export const infoUpdate = [
+    {
+        id: 1,
+        title: "Mathieu Seguin"
+    },
+    {
+        id: 2,
+        title: "mseguin@google.com",
+        textDecoration: "underline"
+    },
+    {
+        id: 3,
+        title: "Mot de passe"
+    },
+    {
+        id: 4,
+        title: "Mes notifications"
+    },
+]
+
+export const NotificationData = [
+    {
+        id: 1,
+        title: "Fête de la lunette",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.monsite.fr",
+        date: "Maintenant",
+        img: Notification1
+    }
 ]
