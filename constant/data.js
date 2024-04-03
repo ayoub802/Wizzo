@@ -1,5 +1,5 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
+import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
 
 export const categories = [
     {
@@ -195,4 +195,79 @@ export const NotificationData = [
         img: Notification2,
         buttonText: "En savoir plus"
     },
+]
+
+export const annuaire = [
+    {
+        id: 1,
+        title: "les grands magasins de chateau thierry",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.monsite.fr",
+        img: Notification1,
+        kilometrag: 20
+    },
+    {
+        id: 2,
+        title: "la carte’rit",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.monsite.fr",
+        img: Notification2,
+        kilometrag: 20
+    },
+    {
+        id: 3,
+        title: "la carte’rit",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.monsite.fr",
+        img: Annuaire1,
+        kilometrag: 20
+    },
+    {
+        id: 4,
+        title: "la carte’rit",
+        address: "23 Grande rue 02400 Chateau Thierry",
+        phone: "03.26.27.28.29",
+        site: "www.monsite.fr",
+        img: Annuaire2,
+        kilometrag: 20
+    },
+]
+
+export const bonPlan = [
+    {
+        id: 1,
+        title: "La lunetterie",
+        address: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        remise: "1€ au lieu de 199€",
+        date: "Le 23 juin 2024 à partir de 18h",
+        img: Notification3,
+    },
+    {
+        id: 2,
+        title: "La lunetterie",
+        address: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        remise: "50% de remise",
+        date: "Le 23 juin 2024 à partir de 18h",
+        img: Notification3,
+    },
+    {
+        id: 1,
+        title: "La lunetterie",
+        address: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        remise: "139 € 99 €",
+        date: "Le 23 juin 2024 à partir de 18h",
+        img: Notification3,
+    },
+    {
+        id: 1,
+        title: "La lunetterie",
+        address: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        remise: "50% de remise",
+        date: "Le 23 juin 2024 à partir de 18h",
+        img: Notification3,
+    },
+
 ]
