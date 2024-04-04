@@ -18,7 +18,7 @@ const TrieButton = ({ top }) => {
       }
   return (
     <View style={{position: "relative"}}>
-    <TouchableOpacity onPress={() => resizeBox(1)} style={{borderRadius: 50,justifyContent: "center",flexDirection: "row" ,alignItems: "center" ,borderWidth: 1, borderColor: COLORS.borderColor,width: 95,gap: 5 ,height: 28,position: "relative", zIndex: 1}}>
+    <TouchableOpacity  onPress={() =>  {resizeBox(1)}} style={{borderRadius: 50,justifyContent: "center",flexDirection: "row" ,alignItems: "center" ,borderWidth: 1, borderColor: COLORS.borderColor,width: 95,gap: 5 ,height: 28,position: "relative", zIndex: 1}}>
         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.borderColor}}>Trier par</Text>
        <AntDesign name='caretdown' size={12} color={COLORS.borderColor}/>
     </TouchableOpacity>

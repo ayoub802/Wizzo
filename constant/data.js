@@ -271,3 +271,45 @@ export const bonPlan = [
     },
 
 ]
+
+export const filterCategories = [
+    {
+        id: 1,
+        title: "Animaux",
+    },
+    {
+        id: 2,
+        title: "Economie",
+    },
+    {
+        id: 3,
+        title: "Resto",
+    },
+    {
+        id: 4,
+        title: "Courses",
+    },
+    {
+        id: 5,
+        title: "Viande",
+    },
+]
+
+export const filterDate = [
+    {
+        id: 1,
+        title: "Les plus récents"
+    },
+    {
+        id: 2,
+        title: "Aujourd’hui"
+    },
+    {
+        id: 3,
+        title: "Demain"
+    },
+    {
+        id: 4,
+        title: "Cette semaine"
+    },
+]

@@ -4,7 +4,7 @@ import { SearchIcon } from '../../constant/image'
 import { COLORS, FONTFAMILY } from '../../styles/Global'
 import ButtonFilter from '../buttons/ButtonFilter'
 
-const Search = ({ plceholderTitle }) => {
+const Search = ({ plceholderTitle, sheetRef }) => {
 
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
@@ -22,7 +22,7 @@ const Search = ({ plceholderTitle }) => {
             />
         </View>
         <View>
-            <ButtonFilter />
+            <ButtonFilter sheetRef={sheetRef}/>
         </View>
     </View>
   )

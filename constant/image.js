@@ -34,6 +34,7 @@ import Notification3 from "../assets/Images/notification_3.png"
 import SearchIcon from "../assets/icons/search.png"
 import Annuaire1 from "../assets/Images/annuaire1.png"
 import Annuaire2 from "../assets/Images/annuaire2.png"
+import Calendar from "../assets/icons/calendar.png"
 export {
     LogoWizzy,
     Shape1,
@@ -70,5 +71,6 @@ export {
     Notification3,
     SearchIcon,
     Annuaire1,
-    Annuaire2
+    Annuaire2,
+    Calendar
 }
