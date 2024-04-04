@@ -35,6 +35,11 @@ import SearchIcon from "../assets/icons/search.png"
 import Annuaire1 from "../assets/Images/annuaire1.png"
 import Annuaire2 from "../assets/Images/annuaire2.png"
 import Calendar from "../assets/icons/calendar.png"
+import HomeIconGris from "../assets/Images/HomeIconGris.png"
+import CourseIconGris from "../assets/Images/CourseIconGris.png"
+import EcoIconGris from "../assets/Images/EcoIconGris.png"
+import RestoIconGris from "../assets/Images/RestoIconGris.png"
+import ViandIconGris from "../assets/Images/ViandIconGris.png"
 export {
     LogoWizzy,
     Shape1,
@@ -72,5 +77,10 @@ export {
     SearchIcon,
     Annuaire1,
     Annuaire2,
-    Calendar
+    Calendar,
+    HomeIconGris,
+    CourseIconGris,
+    EcoIconGris,
+    RestoIconGris,
+    ViandIconGris,
 }

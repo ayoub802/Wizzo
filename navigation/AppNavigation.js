@@ -16,6 +16,7 @@ import Notification from '../screens/Notification/Notification'
 import Annuaire from '../screens/Annuaire/Annuaire'
 import BonPlan from '../screens/BonPlan/BonPlan'
 import Agenda from '../screens/Agenda/Agenda'
+import SearchScreen from '../screens/Search/SearchScreen'
 
 
 const AppNavigation = () => {
@@ -24,7 +25,7 @@ const AppNavigation = () => {
   return (
     
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='Agenda' screenOptions={{
+        <Stack.Navigator initialRouteName='SearchScreen' screenOptions={{
             headerShown: false
         }}>
             <Stack.Screen name='OnBorading' component={OnBoarding}/>
@@ -41,6 +42,7 @@ const AppNavigation = () => {
             <Stack.Screen name='Annuaire' component={Annuaire}/>
             <Stack.Screen name='BonPlan' component={BonPlan}/>
             <Stack.Screen name='Agenda' component={Agenda}/>
+            <Stack.Screen name='SearchScreen' component={SearchScreen}/>
         </Stack.Navigator>
      </NavigationContainer>
   )

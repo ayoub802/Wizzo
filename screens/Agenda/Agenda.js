@@ -15,6 +15,7 @@ import Entypo from "react-native-vector-icons/Entypo"
 import Feather from "react-native-vector-icons/Feather"
 import Slider from "react-native-slider"
 import Button from '../../components/buttons/Button'
+import FilterAgenda from '../../components/FilterModal/FilterAgenda'
 
 
 const windowWidth = Dimensions.get("window").width;
@@ -23,6 +24,7 @@ const Agenda = () => {
     const [value, setValue] = useState(20)
     const sheetRef = useRef(null);
     const [isClick, setIsClick] = useState(null)
+    const [isCategClick, setIsCategClick] = useState(null)
 
     const [modalVisible, setModalVisible] = useState(false);
     const fontScale = PixelRatio.getFontScale();
@@ -80,15 +82,17 @@ const Agenda = () => {
                 </View>
             </ScrollView>
         </SafeAreaView> 
-        <BottomSheet style={{backgroundColor: "#fff", borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .8} backdropMaskColor={"#00000090"}  ref={sheetRef}>
+        {/* <BottomSheet style={{backgroundColor: "#fff", borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .8} backdropMaskColor={"#00000090"}  ref={sheetRef}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <TitleHeader title={"Filters"} />
                     <View style={{marginTop: windowWidth * 0.01, marginBottom: windowWidth * 0.05, marginLeft: windowWidth * 0.03}}>
                         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                             {
                                 filterCategories.map((item, index) => (
-                                    <TouchableOpacity style={{marginRight: 20, justifyContent: "center", alignItems: "center", gap: 5}}>
-                                    <View style={{width: windowWidth * 0.2, height: windowWidth * 0.2, borderRadius: 100,  borderWidth: 1, borderColor: COLORS.borderColor}}></View>
+                                    <TouchableOpacity onPress={() => setIsCategClick(index)} key={index} style={{marginRight: 20, justifyContent: "center", alignItems: "center", gap: 5}}>
+                                        <View style={{width: windowWidth * 0.15, height: windowWidth * 0.15, justifyContent:"center", alignItems: "center",borderRadius: 100,  borderWidth: 1, borderColor: COLORS.borderColor, backgroundColor: isCategClick === index ? COLORS.primary : COLORS.white}}>
+                                            <Image source={isCategClick === index ? item.iconWhite : item.iconGris}/>
+                                        </View>
                                         <Text>{item.title}</Text>
                                     </TouchableOpacity>
                                 ))
@@ -185,7 +189,9 @@ const Agenda = () => {
 
                     </View>
                 </ScrollView>
-        </BottomSheet>
+        </BottomSheet> */}
+
+        <FilterAgenda sheetRef={sheetRef}/>
     </>
   )
 }

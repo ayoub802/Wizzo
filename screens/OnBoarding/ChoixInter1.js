@@ -67,7 +67,7 @@ const ChoixInter1 = ({ navigation }) => {
                         <TouchableOpacity onPress={handleSelectAll} style={{paddingHorizontal: 15,paddingVertical: 5, borderRadius: 50,backgroundColor: COLORS.borderColor}}>
                           <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(8)}}>Selectionner Tous</Text>
                         </TouchableOpacity>
-                      </View>
+                      </View> 
                         <FlatList
                             data={categories}
                             numColumns={numColumns}

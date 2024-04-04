@@ -1,5 +1,5 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, EcoIcon, EcoIconBlue, ElectroIcon, ElectroIconBlue, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue } from "./image";
+import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, HomeIconGris, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris } from "./image";
 
 export const categories = [
     {
@@ -276,22 +276,32 @@ export const filterCategories = [
     {
         id: 1,
         title: "Animaux",
+        iconGris: HomeIconGris,
+        iconWhite: AnimalIcon
     },
     {
         id: 2,
         title: "Economie",
+        iconGris: EcoIconGris,
+        iconWhite: EcoIcon
     },
     {
         id: 3,
         title: "Resto",
+        iconGris: RestoIconGris,
+        iconWhite: RestaurantIcon
     },
     {
         id: 4,
         title: "Courses",
+        iconGris: CourseIconGris,
+        iconWhite: CourseIcon
     },
     {
         id: 5,
         title: "Viande",
+        iconGris: ViandIconGris,
+        iconWhite: ViandIcon
     },
 ]
 
