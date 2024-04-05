@@ -1,5 +1,5 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Calendar, Camp1, Camp2, Camp3, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, HomeIconGris, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris } from "./image";
+import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Calendar, Camp1, Camp2, Camp3, Copier, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, HomeIconGris, Instagram, Messanger, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris, Whatsapp, chat, facbookShare, x } from "./image";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import Octicons from "react-native-vector-icons/Octicons"
 import Fontisto from "react-native-vector-icons/Fontisto"
@@ -383,5 +383,43 @@ export const Camp = [
     {
         id: 3,
         image: Camp3
+    },
+]
+
+export const ShareIcon = [
+    {
+        id: 1,
+        title: "Copier le lien",
+        icon: Copier
+    },
+    {
+        id: 2,
+        title: "WhatsApp",
+        icon: Whatsapp
+    },
+    {
+        id: 3,
+        title: "Facebook",
+        icon: facbookShare
+    },
+    {
+        id: 4,
+        title: "Messenger",
+        icon: Messanger
+    },
+    {
+        id: 5,
+        title: "X",
+        icon: x
+    },
+    {
+        id: 6,
+        title: "Instagram",
+        icon: Instagram
+    },
+    {
+        id: 7,
+        title: "Message",
+        icon: chat
     },
 ]

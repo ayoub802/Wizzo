@@ -44,6 +44,13 @@ import FichBanner from "../assets/Images/fichbanner.png"
 import Camp1 from "../assets/Images/camp1.png"
 import Camp2 from "../assets/Images/camp2.png"
 import Camp3 from "../assets/Images/camp3.png"
+import Copier from "../assets/icons/copier.png"
+import facbookShare from "../assets/icons/facebookShare.png"
+import Instagram from "../assets/icons/instagram.png"
+import Messanger from "../assets/icons/messanger.png"
+import Whatsapp from "../assets/icons/whatsapp.png"
+import x from "../assets/icons/x.png"
+import chat from "../assets/icons/chat.png"
 export {
     LogoWizzy,
     Shape1,
@@ -90,5 +97,12 @@ export {
     FichBanner,
     Camp1,
     Camp2,
-    Camp3
+    Camp3,
+    Copier,
+    facbookShare,
+    Instagram,
+    Messanger,
+    Whatsapp,
+    x,
+    chat,
 }

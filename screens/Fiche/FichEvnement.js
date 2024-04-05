@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Dimensions, Image, StatusBar, Touchable, TouchableOpacity, PixelRatio } from 'react-native'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Annuaire1, Annuaire2, Calendar, FichBanner } from '../../constant/image';
 import { useIsFocused } from "@react-navigation/core";
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -16,13 +16,15 @@ import Feather from "react-native-vector-icons/Feather"
 import { BlurView } from "@react-native-community/blur";
 import CampImage from '../../components/Camp/Camp';
 import ShareModal from '../../components/ShareModale/ShareModal';
+import ButtonBig from '../../components/buttons/ButtonBig';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const FichScreen = () => {
+const FichEvnement = () => {
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
 
+    const [isClicked, setIsClicked] = useState(false)
     const sheetRef = useRef(null);
 
     const Headertop = () => {
@@ -35,7 +37,7 @@ const FichScreen = () => {
                          <TouchableOpacity>
                               <Ionicons name='arrow-back-outline' color={COLORS.white} size={windowWidth * 0.05}/>
                          </TouchableOpacity>
-                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(18)}}>Fiche entreprise</Text>
+                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(18)}}>Fiche Evènement</Text>
                       </View>
                       <View style={{flexDirection: "row",  gap: 10}}>
                         <TouchableOpacity onPress={() =>  sheetRef.current?.open()} style={{width: windowWidth * 0.08,position: "relative" , height: windowWidth * 0.08,justifyContent: "center", alignItems: "center", borderRadius: 12, backgroundColor: "rgba(255, 255, 255, 0.30)",}}>
@@ -59,9 +61,9 @@ const FichScreen = () => {
                                 ))
                             }
                         </View>
-                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary, fontSize: getFontSize(10)}}>+20 pers. les suivent</Text>
+                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary, fontSize: getFontSize(10)}}>+20 pers. s’y rendent</Text>
                         <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.04, paddingVertical: windowWidth * 0.02, backgroundColor: COLORS.primary, borderRadius: 8}}>
-                            <Text style={{color: COLORS.white, fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(12)}}>Suivre</Text>
+                            <Text style={{color: COLORS.white, fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(12)}}>Participer</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -139,31 +141,60 @@ const FichScreen = () => {
       };
   return (
     <>
-    <ScrollView style={{ flex: 1, backgroundColor: "#fff" }}>
+    <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, backgroundColor: "#fff" }}>
         <FocusedStatusBar
         barStyle="light"
         backgroundColor="transparent"
         translucent={true}
         />
       <Headertop />
-      <View style={{flex: 1,backgroundColor: "#fff"}}>
+      <View style={{flex: 1,backgroundColor: "#fff", paddingBottom: windowWidth * 0.05}}>
          <View style={{width: windowWidth * 0.9, alignSelf: "center"}}>
            <View style={{marginTop: windowWidth * 0.1}}>
-              <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(35)}}>La Carte'rit</Text>
+              <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(35)}}>Foire champenoise</Text>
 
-              <View style={{marginTop: windowWidth * 0.04}}>
+              <View style={{marginTop: windowWidth * 0.02}}>
                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(16), lineHeight: 28}}>
-                   Nous vous proposons des cartes originales pour toutes vos occasion : anniversaire, baptêmes, mariages ...
+                Evenement 100% champagne
                 </Text>
+                <View style={{flexDirection: "row", alignItems: "center", gap: 10, marginTop: windowWidth * 0.01}}>
+                    <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary, fontSize: getFontSize(12)}}>Decomination</Text>
+                </View>
               </View>
 
-              <View style={{marginTop: windowWidth * 0.04}}>
-                  <FlashList 
-                    data={fichInfo}
-                    estimatedItemSize={200}
-                    numColumns={2}
-                    renderItem={({item}) => <RenderInfo item={item}/>}
-                  />
+              <View style={{marginTop: windowWidth * 0.02}}>
+                  <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
+                    <View style={{flexDirection: "row", alignItems: "center" , gap: 5}}>
+                        <View style={{width: windowWidth * 0.12, height: windowWidth * 0.12, borderRadius: 100, backgroundColor: "#5669FF10", justifyContent: "center", alignItems: "center" }}>
+                          <Feather name="phone-call" color={COLORS.primary} size={18}/>
+                        </View>
+                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(12)}}>06.01.02.03.04</Text>
+                    </View>
+                    <View style={{flexDirection: "row", alignItems: "center" , gap: 5}}>
+                        <View style={{width: windowWidth * 0.12, height: windowWidth * 0.12, borderRadius: 100, backgroundColor: "#5669FF10", justifyContent: "center", alignItems: "center" }}>
+                          {/* <Feather name="phone-call" color={COLORS.primary} size={18}/> */}
+                          <Fontisto name="email" color={COLORS.primary} size={18}/>
+                        </View>
+                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(12)}}>www.monsite.fr</Text>
+                    </View>
+                  </View>
+              </View>
+
+              <View style={{marginTop: windowWidth * 0.05}}>
+                <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#747688", fontSize: getFontSize(12), lineHeight: 18}}>Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad  principis castra multos coopertos paene catenis adduxit in squalorem  deiectos atque maestitiam, quorum adventu intendebantur eculei uncosque  parabat carnifex et tormenta. </Text>
+              </View>
+
+              <View style={{marginTop: windowWidth * 0.05}}>
+                <View style={{flexDirection: "row" ,alignItems: "center", justifyContent: "center"}}>
+                    <View style={{width: windowWidth * 0.32,marginHorizontal:windowWidth * 0.05 ,height: 1.1, backgroundColor: "#00000030"}}></View>
+                    <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#747688", fontSize: getFontSize(10)}}>Lire la suite </Text>
+                    <View style={{width: windowWidth * 0.32,marginHorizontal:windowWidth * 0.05, height: 1.1, backgroundColor: "#00000030"}}></View>
+                </View>
+              </View>
+              <View style={{marginTop: windowWidth * 0.05}}>
+                <View style={{flexDirection: "row" ,alignItems: "center", justifyContent: "center", width: "70%", alignSelf: "center"}}>
+                  <ButtonBig title={"En savoir plus"}/>
+                </View>
               </View>
               <View style={{marginTop: windowWidth * 0.04}}>
                  <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(18)}}>Les bons plans du moment</Text>
@@ -186,4 +217,4 @@ const FichScreen = () => {
   )
 }
 
-export default FichScreen
+export default FichEvnement

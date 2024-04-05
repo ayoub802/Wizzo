@@ -5,9 +5,9 @@ import { COLORS, FONTFAMILY } from '../../styles/Global';
 import Fontisto from "react-native-vector-icons/Fontisto"
 import Feather from "react-native-vector-icons/Feather"
 
-const TitleHeader = ({ title}) => {
+const TitleHeader = ({ title, styleTop}) => {
   return (
-    <Appbar.Header>
+    <Appbar.Header style={{marginTop: styleTop}}>
         <Appbar.Content title={title} titleStyle={{fontFamily: FONTFAMILY.ABeeZee,color: COLORS.secondary}}  />
     </Appbar.Header>
   )

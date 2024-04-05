@@ -18,6 +18,8 @@ import BonPlan from '../screens/BonPlan/BonPlan'
 import Agenda from '../screens/Agenda/Agenda'
 import SearchScreen from '../screens/Search/SearchScreen'
 import FichScreen from '../screens/Fiche/ficheScreen'
+import FichBon from '../screens/Fiche/FichBon'
+import FichEvnement from '../screens/Fiche/FichEvnement'
 
 
 const AppNavigation = () => {
@@ -26,7 +28,7 @@ const AppNavigation = () => {
   return (
     
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='FichScreen' screenOptions={{
+        <Stack.Navigator initialRouteName='FichEvnement' screenOptions={{
             headerShown: false
         }}>
             <Stack.Screen name='OnBorading' component={OnBoarding}/>
@@ -45,6 +47,8 @@ const AppNavigation = () => {
             <Stack.Screen name='Agenda' component={Agenda}/>
             <Stack.Screen name='SearchScreen' component={SearchScreen}/>
             <Stack.Screen name='FichScreen' component={FichScreen}/>
+            <Stack.Screen name='FichBon' component={FichBon}/>
+            <Stack.Screen name='FichEvnement' component={FichEvnement}/>
         </Stack.Navigator>
      </NavigationContainer>
   )
