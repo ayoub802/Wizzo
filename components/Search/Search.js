@@ -6,7 +6,7 @@ import ButtonFilter from '../buttons/ButtonFilter'
 
 const Search = ({ plceholderTitle, sheetRef }) => {
 
-    const fontScale = PixelRatio.getFontScale();
+    const fontScale = PixelRatio.getFontScale(); 
     const getFontSize = size => size / fontScale;
   return (
     <View style={{flexDirection: "row",gap: 5 , alignItems: "center",flex: 1, width: "100%"}}>

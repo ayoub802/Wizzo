@@ -6,7 +6,7 @@ import Ionicons from "react-native-vector-icons/Ionicons"
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
-const BonPlanCard = ({item}) => {
+const BonPlanCard = ({item, navigation}) => {
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
 
@@ -43,7 +43,7 @@ const BonPlanCard = ({item}) => {
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary,textAlign: "right" ,fontSize: getFontSize(10)}}>{item.date}</Text>
                     </View>
                     <View style={{justifyContent: "center", alignItems: "center", gap: 3}}>
-                        <TouchableOpacity style={{backgroundColor: COLORS.primary, borderRadius: 8, paddingVertical: 8, paddingHorizontal: 10}}>
+                        <TouchableOpacity onPress={() => navigation.navigate('FichBon')} style={{backgroundColor: COLORS.primary, borderRadius: 8, paddingVertical: 8, paddingHorizontal: 10}}>
                            <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(10)}}>En profiter</Text>
                         </TouchableOpacity>          
                     </View>

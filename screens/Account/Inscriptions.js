@@ -186,7 +186,7 @@ const Inscriptions = ({ navigation}) => {
 
                               <View style={{flexDirection: "row", alignItems: "center", gap: 5}}>
                                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.secondary, textAlign: "center"}}>Vous avez déjà un compte ?</Text>
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                                   <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.primary, textAlign: "center"}}>Connectez-vous</Text>
                                 </TouchableOpacity>
                               </View>
@@ -207,7 +207,7 @@ const Inscriptions = ({ navigation}) => {
 
                             <View style={{flexDirection: "row", alignItems: "center", gap: 5,marginBottom: windowWidth * 0.04}}>
                             <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.secondary, textAlign: "center"}}>Vous avez déjà un compte ?</Text>
-                                <TouchableOpacity>
+                                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                                   <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.primary, textAlign: "center"}}>Connectez-vous</Text>
                                 </TouchableOpacity>
                               </View>

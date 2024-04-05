@@ -46,7 +46,7 @@ const OnBoardin1 = () => {
            <View style={{width: "100%", maxWidth: windowWidth * 0.7, paddingBottom: windowWidth * 0.08}}>
             <ButtonBig Press={() => navigation.navigate('Login')} title={"CREER UN compte"}/>
             <View style={{marginTop: windowWidth * 0.05}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
                     <Text style={{textAlign: "center", color: COLORS.primary, fontSize: getFontSize(15), fontFamily: FONTFAMILY.ABeeZee}}>Ou continuer en tant qu’invité &gt;&gt; </Text>
                 </TouchableOpacity>
             </View>

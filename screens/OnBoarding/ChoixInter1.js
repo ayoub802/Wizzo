@@ -82,7 +82,7 @@ const ChoixInter1 = ({ navigation }) => {
                     <View style={{flex: 1, justifyContent: "flex-end", marginBottom: windowHeight * 0.05}}>
                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(11), textAlign: "center", color: COLORS.secondary}}>Vous pourrez modifier vos choix à tout moment dans les réglages</Text>
                        <View style={{flexDirection:"row",gap: 15 ,justifyContent: "center", alignItems: "center", marginTop: windowWidth * 0.05, }}>
-                        <ButtonOutline title={"Passer"}/>
+                        <ButtonOutline title={"Passer"} onPress={() => navigation.navigate('Choix2')}/>
                         <Button title={"Continuer"} onPress={() => navigation.navigate('Choix2')}/>
                        </View>
                     </View>

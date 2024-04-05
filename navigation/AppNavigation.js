@@ -20,6 +20,7 @@ import SearchScreen from '../screens/Search/SearchScreen'
 import FichScreen from '../screens/Fiche/ficheScreen'
 import FichBon from '../screens/Fiche/FichBon'
 import FichEvnement from '../screens/Fiche/FichEvnement'
+import HomeScreen from '../screens/Home/HomeScreen'
 
 
 const AppNavigation = () => {
@@ -28,7 +29,7 @@ const AppNavigation = () => {
   return (
     
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='FichEvnement' screenOptions={{
+        <Stack.Navigator initialRouteName='OnBorading' screenOptions={{
             headerShown: false
         }}>
             <Stack.Screen name='OnBorading' component={OnBoarding}/>
@@ -49,6 +50,7 @@ const AppNavigation = () => {
             <Stack.Screen name='FichScreen' component={FichScreen}/>
             <Stack.Screen name='FichBon' component={FichBon}/>
             <Stack.Screen name='FichEvnement' component={FichEvnement}/>
+            <Stack.Screen name='HomeScreen' component={HomeScreen}/>
         </Stack.Navigator>
      </NavigationContainer>
   )

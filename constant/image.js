@@ -51,6 +51,13 @@ import Messanger from "../assets/icons/messanger.png"
 import Whatsapp from "../assets/icons/whatsapp.png"
 import x from "../assets/icons/x.png"
 import chat from "../assets/icons/chat.png"
+import LogoWhite from "../assets/Images/LogoWhite.png"
+import searchWhite from "../assets/icons/searchWhite.png"
+
+
+
+
+
 export {
     LogoWizzy,
     Shape1,
@@ -105,4 +112,6 @@ export {
     Whatsapp,
     x,
     chat,
+    LogoWhite,
+    searchWhite
 }

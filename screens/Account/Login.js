@@ -124,11 +124,13 @@ const Login = ({ navigation }) => {
                                 />
                             <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary}}>Rester connecté</Text>
                             </View>
-                           <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary}}>Mot de passe oublié ?</Text>
+                            <TouchableOpacity onPress={() => navigation.navigate('ResetPassword')}>
+                                <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary}}>Mot de passe oublié ?</Text>
+                            </TouchableOpacity>
                         </View>
 
                         <View style={{width: windowWidth * 0.7, alignSelf: "center", marginTop: windowWidth * 0.1}}>
-                            <ButtonBig title={"Se connecter"}/>
+                            <ButtonBig Press={() => navigation.navigate('HomeScreen')} title={"Se connecter"}/>
                         </View>
                         <View style={{width: windowWidth * 0.7, alignSelf: "center", marginTop: windowWidth * 0.08,}}>
                             <Text style={{textAlign: "center", fontFamily: FONTFAMILY.ABeeZee, color: "#9D9898"}}>Ou</Text>
@@ -145,7 +147,7 @@ const Login = ({ navigation }) => {
                                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary}}>Continuer avec Facebook</Text>
                             </TouchableOpacity>
                         </View>
-                        <View style={{ marginTop: windowWidth * 0.05, flexDirection: "row",  gap: 8}}>
+                        <View style={{ marginTop: windowWidth * 0.05, flexDirection: "row",  gap: 8, marginBottom: windowWidth * 0.04}}>
                             <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(15)}}>Par encore de compte ?</Text>
                             <TouchableOpacity onPress={() => navigation.navigate('Inscription')}>
                                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary, fontSize: getFontSize(15)}}>Créer votre compte</Text>

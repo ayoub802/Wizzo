@@ -4,7 +4,10 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import Octicons from "react-native-vector-icons/Octicons"
 import Fontisto from "react-native-vector-icons/Fontisto"
 import Feather from "react-native-vector-icons/Feather"
-
+import HomeCardImage from '../assets/Images/HomeCard.png'
+import HomeCard1 from '../assets/Images/HomeCard1.png'
+import HomeCard2 from '../assets/Images/HomeCard2.png'
+import HomeCard3 from '../assets/Images/HomeCard3.png'
 export const categories = [
     {
         id: 1,
@@ -421,5 +424,26 @@ export const ShareIcon = [
         id: 7,
         title: "Message",
         icon: chat
+    },
+]
+
+export const PlanHomeData = [
+    {
+        id: 1,
+        title: "La lunetterie",
+        desc: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        image: HomeCardImage
+    },
+    {
+        id: 2,
+        title: "Primeur Epernay",
+        desc: "Les fruits à 50 % à pzrtir de 18h",
+        image: HomeCard1
+    },
+    {
+        id: 3,
+        title: "La lunetterie",
+        desc: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        image: HomeCard2
     },
 ]

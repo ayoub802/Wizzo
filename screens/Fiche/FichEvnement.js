@@ -17,6 +17,7 @@ import { BlurView } from "@react-native-community/blur";
 import CampImage from '../../components/Camp/Camp';
 import ShareModal from '../../components/ShareModale/ShareModal';
 import ButtonBig from '../../components/buttons/ButtonBig';
+import MapView, { Marker } from 'react-native-maps'; // Import MapView and Marker from react-native-maps
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -159,29 +160,19 @@ const FichEvnement = () => {
                 </Text>
                 <View style={{flexDirection: "row", alignItems: "center", gap: 10, marginTop: windowWidth * 0.01}}>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary, fontSize: getFontSize(12)}}>Decomination</Text>
+                    <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.05, paddingVertical: windowWidth * 0.02, backgroundColor: COLORS.primary, borderRadius: 10}}>
+                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(9), color: COLORS.white}}>En savoir plus</Text>
+                    </TouchableOpacity>
                 </View>
-              </View>
-
-              <View style={{marginTop: windowWidth * 0.02}}>
-                  <View style={{flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
-                    <View style={{flexDirection: "row", alignItems: "center" , gap: 5}}>
-                        <View style={{width: windowWidth * 0.12, height: windowWidth * 0.12, borderRadius: 100, backgroundColor: "#5669FF10", justifyContent: "center", alignItems: "center" }}>
-                          <Feather name="phone-call" color={COLORS.primary} size={18}/>
-                        </View>
-                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(12)}}>06.01.02.03.04</Text>
-                    </View>
-                    <View style={{flexDirection: "row", alignItems: "center" , gap: 5}}>
-                        <View style={{width: windowWidth * 0.12, height: windowWidth * 0.12, borderRadius: 100, backgroundColor: "#5669FF10", justifyContent: "center", alignItems: "center" }}>
-                          {/* <Feather name="phone-call" color={COLORS.primary} size={18}/> */}
-                          <Fontisto name="email" color={COLORS.primary} size={18}/>
-                        </View>
-                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(12)}}>www.monsite.fr</Text>
-                    </View>
-                  </View>
               </View>
 
               <View style={{marginTop: windowWidth * 0.05}}>
                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#747688", fontSize: getFontSize(12), lineHeight: 18}}>Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad  principis castra multos coopertos paene catenis adduxit in squalorem  deiectos atque maestitiam, quorum adventu intendebantur eculei uncosque  parabat carnifex et tormenta. </Text>
+                <View style={{marginTop: windowWidth * 0.05}}>
+                   <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(18)}}>Le programme</Text>
+                   <Text style={{fontFamily: FONTFAMILY.ABeeZee,marginTop: windowWidth * 0.02 ,color: "#747688", fontSize: getFontSize(12), lineHeight: 18}}>Quibus ita sceleste patratis Paulus cruore perfusus reversusque ad  principis castra multos coopertos.</Text>
+
+                </View>
               </View>
 
               <View style={{marginTop: windowWidth * 0.05}}>
@@ -190,14 +181,10 @@ const FichEvnement = () => {
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#747688", fontSize: getFontSize(10)}}>Lire la suite </Text>
                     <View style={{width: windowWidth * 0.32,marginHorizontal:windowWidth * 0.05, height: 1.1, backgroundColor: "#00000030"}}></View>
                 </View>
-              </View>
-              <View style={{marginTop: windowWidth * 0.05}}>
-                <View style={{flexDirection: "row" ,alignItems: "center", justifyContent: "center", width: "70%", alignSelf: "center"}}>
-                  <ButtonBig title={"En savoir plus"}/>
-                </View>
+                
               </View>
               <View style={{marginTop: windowWidth * 0.04}}>
-                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(18)}}>Les bons plans du moment</Text>
+                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(18)}}>Quoi faire d’autre </Text>
                  <ScrollView horizontal={true} style={{marginTop: windowWidth * 0.04}} showsHorizontalScrollIndicator={false}>
                       {
                         planImage.map((obj, index)=> (

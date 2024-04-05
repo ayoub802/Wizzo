@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Dimensions, TouchableOpacity, StyleSheet, Modal, StatusBar, PixelRatio, } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import TitleHeader from '../../components/Header/TitleHeader'
 import Search from '../../components/Search/Search'
@@ -8,10 +8,12 @@ import {  bonPlan } from '../../constant/data'
 import { FlashList } from "@shopify/flash-list";
 import { COLORS, FONTFAMILY } from '../../styles/Global'
 import BonPlanCard from '../../components/Cards/BonPlanCard'
+import FilterAgenda from '../../components/FilterModal/FilterAgenda'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
-const BonPlan = () => {
+const BonPlan = ({ navigation }) => {
+    const sheetRef = useRef(null);
 
     const [modalVisible, setModalVisible] = useState(false);
     const fontScale = PixelRatio.getFontScale();
@@ -43,7 +45,7 @@ const BonPlan = () => {
     <SafeAreaView style={{flex: 1, backgroundColor:"#fff"}}>
         <ScrollView showsVerticalScrollIndicator={false} style={{flex:1}}>
             <View style={{flex: 1, backgroundColor:"#fff"}}>
-                <TitleHeader title={"Bons plans"} />
+                <TitleHeader styleTop={- windowWidth * 0.1} title={"Bons plans"} />
                 <View style={{width: windowWidth * 0.85, alignSelf:"center"}}>
                     <View style={{marginVertical: 10, flexDirection: "row",justifyContent: "center" ,alignItems: "center", gap: 8}}>
                         {
@@ -55,7 +57,7 @@ const BonPlan = () => {
                         }
                     </View>
                     <View style={{marginTop: 10}}>
-                      <Search plceholderTitle={"Rechercher"}/>
+                      <Search sheetRef={sheetRef} plceholderTitle={"Rechercher"}/>
                     </View>
 
                     <View style={{marginTop: 10, alignItems: "flex-end"}}>
@@ -65,7 +67,7 @@ const BonPlan = () => {
                     <View style={{marginTop: 20}}>
                        <FlashList 
                         data={bonPlan}
-                        renderItem={({item}) => <BonPlanCard item={item}/>}
+                        renderItem={({item}) => <BonPlanCard navigation={navigation} item={item}/>}
                         estimatedItemSize={200}
                        />
                     </View>
@@ -74,6 +76,8 @@ const BonPlan = () => {
 
             </View>
         </ScrollView>
+
+        <FilterAgenda sheetRef={sheetRef}/>
     </SafeAreaView>
   )
 }
