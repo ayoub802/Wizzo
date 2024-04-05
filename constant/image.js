@@ -40,6 +40,10 @@ import CourseIconGris from "../assets/Images/CourseIconGris.png"
 import EcoIconGris from "../assets/Images/EcoIconGris.png"
 import RestoIconGris from "../assets/Images/RestoIconGris.png"
 import ViandIconGris from "../assets/Images/ViandIconGris.png"
+import FichBanner from "../assets/Images/fichbanner.png"
+import Camp1 from "../assets/Images/camp1.png"
+import Camp2 from "../assets/Images/camp2.png"
+import Camp3 from "../assets/Images/camp3.png"
 export {
     LogoWizzy,
     Shape1,
@@ -83,4 +87,8 @@ export {
     EcoIconGris,
     RestoIconGris,
     ViandIconGris,
+    FichBanner,
+    Camp1,
+    Camp2,
+    Camp3
 }

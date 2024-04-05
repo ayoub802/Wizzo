@@ -1,5 +1,9 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, HomeIconGris, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris } from "./image";
+import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Calendar, Camp1, Camp2, Camp3, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, HomeIconGris, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris } from "./image";
+import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
+import Octicons from "react-native-vector-icons/Octicons"
+import Fontisto from "react-native-vector-icons/Fontisto"
+import Feather from "react-native-vector-icons/Feather"
 
 export const categories = [
     {
@@ -321,5 +325,63 @@ export const filterDate = [
     {
         id: 4,
         title: "Cette semaine"
+    },
+]
+
+export const fichInfo = [
+    {
+        id: 1,
+        title: "Du mardi au dimanche",
+        hour: "10:00 - 13:00",
+        hour2: "10:00 - 13:00",
+        address: "",
+        icon: Calendar
+    },
+    {
+        id: 2,
+        title: "23 Grande rue",
+        address: "02400 Chateau Thierry",
+        hour: "",
+        hour2: "",
+        icon: <FontAwesome5 name="map-marker-alt" color={COLORS.primary} size={20}/>
+    },
+    {
+        id: 3,
+        title: "www.monsite.fr",
+        hour: "",
+        hour2: "",
+        address: "",
+        icon: <Octicons name="link" color={COLORS.primary} size={20}/>
+    },
+    {
+        id: 4,
+        title: "contact@monsite.fr",
+        hour: "",
+        hour2: "",
+        address: "",
+        icon: <Fontisto name="email" color={COLORS.primary} size={20}/>
+    },
+    {
+        id: 5,
+        title: "03.01.02.03.04",
+        hour: "",
+        hour2: "",
+        address: "",
+        icon: <Feather name="phone-call" color={COLORS.primary} size={20}/>
+    },
+]
+
+export const Camp = [
+    {
+        id: 1,
+        image: Camp1
+    },
+    {
+        id: 2,
+        image: Camp2
+    },
+    {
+        id: 3,
+        image: Camp3
     },
 ]
