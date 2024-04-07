@@ -45,7 +45,7 @@ const BonPlan = ({ navigation }) => {
     <SafeAreaView style={{flex: 1, backgroundColor:"#fff"}}>
         <ScrollView showsVerticalScrollIndicator={false} style={{flex:1}}>
             <View style={{flex: 1, backgroundColor:"#fff"}}>
-                <TitleHeader styleTop={- windowWidth * 0.1} title={"Bons plans"} />
+                <TitleHeader  styleTop={- windowWidth * 0.1} title={"Bons plans"} />
                 <View style={{width: windowWidth * 0.85, alignSelf:"center"}}>
                     <View style={{marginVertical: 10, flexDirection: "row",justifyContent: "center" ,alignItems: "center", gap: 8}}>
                         {
@@ -61,7 +61,7 @@ const BonPlan = ({ navigation }) => {
                     </View>
 
                     <View style={{marginTop: 10, alignItems: "flex-end"}}>
-                         <TrieButton top={225}/> 
+                         <TrieButton top={windowHeight * .285}/> 
                     </View>
 
                     <View style={{marginTop: 20}}>

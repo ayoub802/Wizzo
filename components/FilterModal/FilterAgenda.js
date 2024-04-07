@@ -25,10 +25,10 @@ const FilterAgenda = ({sheetRef}) => {
       }
   };
   return (
-    <BottomSheet style={{backgroundColor: "#fff", borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .8} backdropMaskColor={"#00000090"}  ref={sheetRef}>
-      <ScrollView showsVerticalScrollIndicator={false}>
-          <TitleHeader styleTop={- windowWidth * 0.12} title={"Filters"} />
-          <View style={{marginTop: windowWidth * 0.01, marginBottom: windowWidth * 0.05, marginLeft: windowWidth * 0.03}}>
+    <BottomSheet style={{backgroundColor: "#fff", zIndex: 1000 ,borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .8} backdropMaskColor={"#00000090"}  ref={sheetRef}>
+      <ScrollView showsVerticalScrollIndicator={false} style={{marginBottom: windowWidth * 0.05}}>
+          <TitleHeader styleTop={- windowWidth * 0.05} title={"Filters"} />
+          <View style={{marginTop: windowWidth * 0.01,marginBottom: windowWidth * 0.05, marginLeft: windowWidth * 0.03}}>
               <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                   {
                       filterCategories.map((item, index) => (
@@ -122,10 +122,10 @@ const FilterAgenda = ({sheetRef}) => {
                   </View>
 
                   <View style={{flexDirection: "row", alignItems: "center",justifyContent: "center" ,gap: 25, marginTop: windowWidth * 0.05,marginBottom: windowWidth * 0.14,}}>
-                      <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.07,backgroundColor: COLORS.white ,paddingVertical: windowWidth * 0.052, borderRadius: 8,  borderWidth: 1, borderColor: COLORS.borderColor}}>
+                      <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.075,backgroundColor: COLORS.white ,paddingVertical: windowWidth * 0.045, borderRadius: 8,  borderWidth: 1, borderColor: COLORS.borderColor}}>
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.secondary, textTransform: "uppercase"}}>supprimer</Text>
                       </TouchableOpacity>
-                      <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.07,backgroundColor: COLORS.primary ,paddingVertical: windowWidth * 0.052, borderRadius: 8,}}>
+                      <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.075,backgroundColor: COLORS.primary ,paddingVertical: windowWidth * 0.045, borderRadius: 8,}}>
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.white, textTransform: "uppercase"}}>appliquer</Text>
                       </TouchableOpacity>
                   </View>

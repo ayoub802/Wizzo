@@ -15,7 +15,7 @@ const MORE_ICON = Platform.OS === 'ios' ? 'dots-horizontal' : 'dots-vertical';
 
 const windowWidth = Dimensions.get("window").width;
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
 
     const bell = <Fontisto name="bell" size={20} color="#000"/>
     const fontScale = PixelRatio.getFontScale();
@@ -44,7 +44,7 @@ const ProfileScreen = () => {
 
                   <Button icon={({ color, size }) => (
                       <Feather name={"edit-3"} color={COLORS.primary} size={size} />
-                      )}  mode="contained" style={{backgroundColor:  COLORS.primary_light1,paddingVertical: 0, paddingHorizontal: 8}} textColor={COLORS.primary} labelStyle={{fontFamily: FONTFAMILY.ABeeZee, textTransform: "uppercase", fontSize: getFontSize(12)}} onPress={() => console.log('Pressed')}>
+                      )}  mode="contained" style={{backgroundColor:  COLORS.primary_light1,paddingVertical: 0, paddingHorizontal: 8}} textColor={COLORS.primary} labelStyle={{fontFamily: FONTFAMILY.ABeeZee, textTransform: "uppercase", fontSize: getFontSize(12)}} onPress={() =>  navigation.navigate('UpdateProfileScreen')}>
                     Modified
                   </Button>
                 </View>
@@ -66,7 +66,7 @@ const ProfileScreen = () => {
 
                   <Button icon={({ color, size }) => (
                       <Feather name={"edit-3"} color={COLORS.primary} size={size} />
-                      )}  mode="contained" style={{backgroundColor:  COLORS.primary_light1,paddingVertical: 0, paddingHorizontal: 8}} textColor={COLORS.primary} labelStyle={{fontFamily: FONTFAMILY.ABeeZee, textTransform: "uppercase", fontSize: getFontSize(12)}} onPress={() => console.log('Pressed')}>
+                      )}  mode="contained" style={{backgroundColor:  COLORS.primary_light1,paddingVertical: 0, paddingHorizontal: 8}} textColor={COLORS.primary} labelStyle={{fontFamily: FONTFAMILY.ABeeZee, textTransform: "uppercase", fontSize: getFontSize(12)}} onPress={() => navigation.navigate('UpdateProfileScreen')}>
                     Modified
                   </Button>
                 </View>

@@ -47,7 +47,7 @@ const Verification = ({ navigation}) => {
 
 
                 <View style={{width: "100%", maxWidth: windowWidth * 0.8, paddingBottom: windowWidth * 0.08}}>
-                    <ButtonBig Press={() => navigation.navigate('HomeScreen')} title={"Continuer"}/>
+                    <ButtonBig Press={() => navigation.navigate('MyTabs')} title={"Continuer"}/>
                 </View>
             </View>
 

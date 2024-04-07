@@ -130,7 +130,7 @@ const Login = ({ navigation }) => {
                         </View>
 
                         <View style={{width: windowWidth * 0.7, alignSelf: "center", marginTop: windowWidth * 0.1}}>
-                            <ButtonBig Press={() => navigation.navigate('HomeScreen')} title={"Se connecter"}/>
+                            <ButtonBig Press={() => navigation.navigate('MyTabs')} title={"Se connecter"}/>
                         </View>
                         <View style={{width: windowWidth * 0.7, alignSelf: "center", marginTop: windowWidth * 0.08,}}>
                             <Text style={{textAlign: "center", fontFamily: FONTFAMILY.ABeeZee, color: "#9D9898"}}>Ou</Text>

@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Dimensions, TouchableOpacity, StyleSheet, Modal, StatusBar, } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import TitleHeader from '../../components/Header/TitleHeader'
 import Search from '../../components/Search/Search'
@@ -7,13 +7,13 @@ import TrieButton from '../../components/TrieButton/TrieButton'
 import { annuaire } from '../../constant/data'
 import AnnuaireCard from '../../components/Cards/AnnuaireCard'
 import { FlashList } from "@shopify/flash-list";
+import FilterAgenda from '../../components/FilterModal/FilterAgenda'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
-const Annuaire = () => {
-
+const Annuaire = ({ navigation }) => {
+  const sheetRef = useRef(null);
     const [modalVisible, setModalVisible] = useState(false);
-
     useEffect(() => {
        StatusBar.setBackgroundColor('#fff')
        StatusBar.setBarStyle('dark-content')
@@ -21,15 +21,15 @@ const Annuaire = () => {
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor:"#fff"}}>
-        <ScrollView style={{flex:1}}>
+        <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false}>
             <View style={{flex: 1, backgroundColor:"#fff"}}>
-                <TitleHeader title={"Annuaire"} />
+                <TitleHeader styleTop={- windowWidth * 0.1} title={"Annuaire"} />
                 <View style={{width: windowWidth * 0.85, alignSelf:"center"}}>
                     <View style={{marginTop: 10}}>
-                      <Search plceholderTitle={"Rechercher"}/>
+                      <Search plceholderTitle={"Rechercher"} sheetRef={sheetRef}/>
                     </View>
 
-                    <View style={{marginTop: 10, alignItems: "flex-end"}}>
+                    <View style={{marginTop: 10, alignItems: "flex-end"}}> 
                          <TrieButton /> 
                     </View>
 
@@ -45,6 +45,7 @@ const Annuaire = () => {
 
             </View>
         </ScrollView>
+        <FilterAgenda sheetRef={sheetRef}/>
     </SafeAreaView>
   )
 }

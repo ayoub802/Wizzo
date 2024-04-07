@@ -53,6 +53,8 @@ import x from "../assets/icons/x.png"
 import chat from "../assets/icons/chat.png"
 import LogoWhite from "../assets/Images/LogoWhite.png"
 import searchWhite from "../assets/icons/searchWhite.png"
+import Event1 from "../assets/Images/Event1.png"
+import Event2 from "../assets/Images/Event2.png"
 
 
 
@@ -113,5 +115,7 @@ export {
     x,
     chat,
     LogoWhite,
-    searchWhite
+    searchWhite,
+    Event1,
+    Event2
 }

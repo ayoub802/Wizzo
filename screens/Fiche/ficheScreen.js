@@ -19,7 +19,7 @@ import ShareModal from '../../components/ShareModale/ShareModal';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const FichScreen = () => {
+const FichScreen = ({ navigation }) => {
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
 
@@ -32,7 +32,7 @@ const FichScreen = () => {
                </View>
                    <View style={{flexDirection: "row",alignItems: "center" ,width: "100%" , justifyContent: "space-between" ,position: "absolute",zIndex: 100, top: StatusBar.currentHeight + 8, maxWidth: windowWidth * 0.9, alignSelf: "center"}}>
                       <View style={{flexDirection: "row", gap: 12}}>
-                         <TouchableOpacity>
+                         <TouchableOpacity onPress={() => navigation.goBack()}>
                               <Ionicons name='arrow-back-outline' color={COLORS.white} size={windowWidth * 0.05}/>
                          </TouchableOpacity>
                          <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(18)}}>Fiche entreprise</Text>

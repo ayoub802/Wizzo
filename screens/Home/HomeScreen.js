@@ -10,7 +10,7 @@ import { AnimalIcon, EcoIcon, LogoWhite, Notification1, Notification2, Notificat
 import AntDesign from "react-native-vector-icons/AntDesign"
 import Fontisto from "react-native-vector-icons/Fontisto"
 import Ionicons from "react-native-vector-icons/Ionicons"
-import { PlanHomeData } from '../../constant/data';
+import { EventHomeData, PlanHomeData } from '../../constant/data';
 import Pub from '../../components/Pub/Pub';
 
 const windowWidth = Dimensions.get('window').width;
@@ -76,7 +76,7 @@ const HomeScreen = ({ navigation }) => {
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee,textAlign: "center" ,color: COLORS.white,fontSize: getFontSize(13) ,textTransform: "uppercase"}}>Château Thierry</Text>
                     </View>
                 </View>
-                <TouchableOpacity style={{width: windowWidth * 0.1, height: windowWidth * 0.1,justifyContent: "center", alignItems: "center", borderRadius: 100 ,backgroundColor: "#ffffff10"}}>
+                <TouchableOpacity onPress={() => navigation.navigate('Notification')} style={{width: windowWidth * 0.1, height: windowWidth * 0.1,justifyContent: "center", alignItems: "center", borderRadius: 100 ,backgroundColor: "#ffffff10"}}>
                      <Fontisto name='bell' color={COLORS.white} size={20}/>
                 </TouchableOpacity>
             </View>
@@ -159,7 +159,7 @@ const HomeScreen = ({ navigation }) => {
 
     const HomeCard = ({item}) => {
         return(
-            <TouchableOpacity style={{padding: windowWidth * 0.04,position: "relative"}}>
+            <TouchableOpacity onPress={() => navigation.navigate('FichBon')} style={{padding: windowWidth * 0.04,position: "relative"}}>
                 <View         
                 style={{
                 width: "100%",
@@ -181,7 +181,7 @@ const HomeScreen = ({ navigation }) => {
                                         <Text style={{textAlign: "center", fontFamily: FONTFAMILY.ABeeZee, textTransform: "uppercase", alignItems: "center", fontSize: getFontSize(8), color: "#EB5757"}}>OCT 24</Text>
                                      </View>
                                  </View>
-                                <TouchableOpacity style={{width: windowWidth * 0.1, height: windowWidth * 0.1, borderRadius: 8, backgroundColor: "#ffffff80", alignItems: "center", justifyContent: "center"}}> 
+                                <TouchableOpacity  style={{width: windowWidth * 0.1, height: windowWidth * 0.1, borderRadius: 8, backgroundColor: "#ffffff80", alignItems: "center", justifyContent: "center"}}> 
                                     <Ionicons name='heart-outline' color={"#EB5757"} size={20}/>
                                 </TouchableOpacity>
                             </View>
@@ -194,7 +194,7 @@ const HomeScreen = ({ navigation }) => {
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#484D70", fontSize: getFontSize(12)}}>
                         {item.desc}
                         </Text>
-                        <TouchableOpacity style={{marginTop: windowWidth * 0.04}}>
+                        <TouchableOpacity onPress={() => navigation.navigate('FichBon')} style={{marginTop: windowWidth * 0.04}}>
                             <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(13), color: "#5669FF70"}}>En decouvrir plus &gt;&gt;</Text>
                         </TouchableOpacity>
                     </View>
@@ -206,7 +206,7 @@ const HomeScreen = ({ navigation }) => {
     <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, backgroundColor: "#fff" }}>
         <FocusedStatusBar
         barStyle="light"
-        backgroundColor="transparent"
+        backgroundColor="#4A43EC"
         translucent={true}
         />
         <View style={{flex: 1, height: "100%"}}>
@@ -214,7 +214,7 @@ const HomeScreen = ({ navigation }) => {
            <View style={{flex: 1, marginTop: windowWidth * 0.13}}>
                 <View style={{width: windowWidth * 0.85, alignSelf: "center", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(36)}}>Bon Plans</Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('BonPlan')} style={{flexDirection: "row", alignItems: "center", gap: 8}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('BonPlans')} style={{flexDirection: "row", alignItems: "center", gap: 8}}>
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#747688", fontSize: getFontSize(12)}}>Voir tout</Text>
                         <AntDesign name='caretright' size={12} color={"#747688"}/>
                     </TouchableOpacity>
@@ -233,7 +233,7 @@ const HomeScreen = ({ navigation }) => {
 
                 <View style={{width: windowWidth * 0.85, marginTop: windowWidth * 0.05,alignSelf: "center", flexDirection: "row", alignItems: "center", justifyContent: "space-between"}}>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(20)}}>Evènements à proximité</Text>
-                    <TouchableOpacity style={{flexDirection: "row", alignItems: "center", gap: 8}}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Agenda')} style={{flexDirection: "row", alignItems: "center", gap: 8}}>
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: "#747688", fontSize: getFontSize(12)}}>Voir tout</Text>
                         <AntDesign name='caretright' size={12} color={"#747688"}/>
                     </TouchableOpacity>
@@ -242,7 +242,7 @@ const HomeScreen = ({ navigation }) => {
                 <View style={{marginTop: windowWidth * 0.01}}>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                         {
-                            PlanHomeData.map((obj, index) =>  <HomeCard item={obj} key={index}/>)
+                            EventHomeData.map((obj, index) =>  <HomeCard item={obj} key={index}/>)
                         }
                     </ScrollView>
                 </View>

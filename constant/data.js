@@ -1,5 +1,5 @@
 import { COLORS } from "../styles/Global";
-import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Calendar, Camp1, Camp2, Camp3, Copier, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, HomeIconGris, Instagram, Messanger, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris, Whatsapp, chat, facbookShare, x } from "./image";
+import { AnimalIcon, AnimalIconBlue, Annuaire1, Annuaire2, AutoIcon, AutoIconBlue, Calendar, Camp1, Camp2, Camp3, Copier, Coup1, Coup2, CourseIcon, CourseIconBlue, CourseIconGris, EcoIcon, EcoIconBlue, EcoIconGris, ElectroIcon, ElectroIconBlue, Event1, Event2, HomeIconGris, Instagram, Messanger, MotoIcon, MotoIconBlue, Notification1, Notification2, Notification3, RestaurantIcon, RestaurantIconBlue, RestoIconGris, ShoppingIcon, ShoppingIconblue, VetementIcon, VetementIconBlue, ViandIcon, ViandIconBlue, ViandIconGris, Whatsapp, chat, facbookShare, x } from "./image";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5"
 import Octicons from "react-native-vector-icons/Octicons"
 import Fontisto from "react-native-vector-icons/Fontisto"
@@ -439,6 +439,26 @@ export const PlanHomeData = [
         title: "Primeur Epernay",
         desc: "Les fruits à 50 % à pzrtir de 18h",
         image: HomeCard1
+    },
+    {
+        id: 3,
+        title: "La lunetterie",
+        desc: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        image: HomeCard2
+    },
+]
+export const EventHomeData = [
+    {
+        id: 1,
+        title: "La lunetterie",
+        desc: "1 paire de lunettes achetée, la deuxième à 1 € de plus",
+        image: Event1
+    },
+    {
+        id: 2,
+        title: "Primeur Epernay",
+        desc: "Les fruits à 50 % à pzrtir de 18h",
+        image: Event2
     },
     {
         id: 3,

@@ -3,10 +3,14 @@ import React, { useRef, useState } from 'react'
 import { COLORS, FONTFAMILY } from '../../styles/Global'
 import Feather from "react-native-vector-icons/Feather"
 import Ionicons from "react-native-vector-icons/Ionicons"
+import { useNavigation } from '@react-navigation/native';
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 const AgendaCard = ({item}) => {
+
+    const navigation = useNavigation();
+
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
 
@@ -43,7 +47,7 @@ const AgendaCard = ({item}) => {
                         <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.primary,textAlign: "right" ,fontSize: getFontSize(10)}}>{item.date}</Text>
                     </View>
                     <View style={{justifyContent: "center", alignItems: "center", gap: 3}}>
-                        <TouchableOpacity style={{backgroundColor: COLORS.primary, borderRadius: 8, paddingVertical: 8, paddingHorizontal: 10}}>
+                        <TouchableOpacity onPress={() => navigation.navigate('FichAgenda')} style={{backgroundColor: COLORS.primary, borderRadius: 8, paddingVertical: 8, paddingHorizontal: 10}}>
                            <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(10)}}>En savoir plus</Text>
                         </TouchableOpacity>          
                     </View>

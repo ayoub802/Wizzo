@@ -2,14 +2,16 @@ import { View, Text, Platform, Image, PixelRatio, Dimensions, TouchableOpacity }
 import React from 'react'
 import { COLORS, FONTFAMILY } from '../../styles/Global'
 import Feather from "react-native-vector-icons/Feather"
+import { useNavigation } from '@react-navigation/native';
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 const AnnuaireCard = ({item}) => {
+  const navigation = useNavigation();
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
   return (
-    <View style={{flexDirection: "row",flex: 1, marginBottom: windowWidth * 0.05, position: "relative" ,alignItems: "center",backgroundColor: COLORS.white, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 12,    shadowColor: '#000',
+    <TouchableOpacity onPress={() => navigation.navigate('FichAnnuaire')} style={{flexDirection: "row",flex: 1, marginBottom: windowWidth * 0.05, position: "relative" ,alignItems: "center",backgroundColor: COLORS.white, borderRadius: 16, paddingHorizontal: 12, paddingVertical: 12,    shadowColor: '#000',
     shadowOffset: {width: 5, height: 4},
     shadowOpacity: 1,
     shadowRadius: 3,}}>
@@ -35,7 +37,7 @@ const AnnuaireCard = ({item}) => {
                     </View>
             </View>
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 
