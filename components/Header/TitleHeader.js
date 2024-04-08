@@ -5,10 +5,10 @@ import { COLORS, FONTFAMILY } from '../../styles/Global';
 import Fontisto from "react-native-vector-icons/Fontisto"
 import Feather from "react-native-vector-icons/Feather"
 
-const TitleHeader = ({ title, styleTop}) => {
+const TitleHeader = ({ title, styleTop,fontFamily = fontFamily}) => {
   return (
     <Appbar.Header style={{marginTop: styleTop}}>
-        <Appbar.Content title={title} titleStyle={{fontFamily: FONTFAMILY.ABeeZee,color: COLORS.secondary}}  />
+        <Appbar.Content title={title} titleStyle={{fontFamily: fontFamily,color: COLORS.secondary}}  />
     </Appbar.Header>
   )
 }

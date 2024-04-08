@@ -15,7 +15,7 @@ const ButtonFilter = ({sheetRef}) => {
         <View style={{width: windowWidth * 0.06, height: windowWidth * 0.06, borderRadius: 50,backgroundColor: COLORS.white, justifyContent: "center", alignItems:"center"}}>
           <Ionicons name='filter' color={COLORS.primary} size={15}/>
         </View>
-        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(13)}}>Filters</Text>
+        <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(13)}}>Filtres</Text>
       </TouchableOpacity>
     </>
   )

@@ -27,7 +27,7 @@ const AgendaCard = ({item}) => {
         <View style={{width: windowWidth * 0.5, alignSelf: "center"}}>
             <View style={{marginTop: 10, flex: 1, justifyContent: "space-between", alignItems: "flex-start", flexDirection: "row"}}>
                 <View style={{width: "60%"}}>
-                    <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.primary}}>{item.title}</Text>
+                    <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.primary, textTransform: "uppercase"}}>{item.title}</Text>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(10.5), color: COLORS.secondary, lineHeight: 18, marginVertical: 8}}>{item.address}</Text>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(10.5), color: COLORS.secondary, lineHeight: 20}}>{item.remise}</Text>
                 </View>

@@ -46,7 +46,7 @@ const BonPlan = ({ navigation }) => {
         <ScrollView showsVerticalScrollIndicator={false} style={{flex:1}}>
             <View style={{flex: 1, backgroundColor:"#fff"}}>
                 <TitleHeader  styleTop={- windowWidth * 0.1} title={"Bons plans"} />
-                <View style={{width: windowWidth * 0.85, alignSelf:"center"}}>
+                <View style={{width: windowWidth * 0.9, alignSelf:"center"}}>
                     <View style={{marginVertical: 10, flexDirection: "row",justifyContent: "center" ,alignItems: "center", gap: 8}}>
                         {
                           plansCategorie.map((obj, i) => (

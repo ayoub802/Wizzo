@@ -27,7 +27,7 @@ const FilterAgenda = ({sheetRef}) => {
   return (
     <BottomSheet style={{backgroundColor: "#fff", zIndex: 1000 ,borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .8} backdropMaskColor={"#00000090"}  ref={sheetRef}>
       <ScrollView showsVerticalScrollIndicator={false} style={{marginBottom: windowWidth * 0.05}}>
-          <TitleHeader styleTop={- windowWidth * 0.05} title={"Filters"} />
+          <TitleHeader styleTop={- windowWidth * 0.12} title={"Filtres"} />
           <View style={{marginTop: windowWidth * 0.01,marginBottom: windowWidth * 0.05, marginLeft: windowWidth * 0.03}}>
               <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                   {

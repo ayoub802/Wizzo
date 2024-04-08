@@ -20,9 +20,9 @@ const ShareModal = ({sheetRef}) => {
         )
     }
   return (
-    <BottomSheet style={{backgroundColor: "#fff", borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .48} backdropMaskColor={"#00000090"}  ref={sheetRef}>
+    <BottomSheet style={{backgroundColor: "#fff", borderTopLeftRadius: 20, borderTopRightRadius: 20}} height={windowHeight * .5} backdropMaskColor={"#00000090"}  ref={sheetRef}>
         <ScrollView showsVerticalScrollIndicator={false}>
-            <TitleHeader title={"Partager avec vos proches"} styleTop={-windowWidth * 0.12}/>
+            <TitleHeader title={"Partager avec vos proches"} styleTop={-windowWidth * 0.13} fontFamily={FONTFAMILY.ABeeZeeItalic}/>
              <View style={{width: windowWidth * 0.92, alignSelf: "center"}}>
                 <FlashList 
                   data={ShareIcon}

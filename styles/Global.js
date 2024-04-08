@@ -20,5 +20,6 @@ export const COLORS = {
 
 
 export const FONTFAMILY = {
-    ABeeZee: "ABeeZee-Regular"
+    ABeeZee: "ABeeZee-Regular",
+    ABeeZeeItalic: "ABeeZee-Italic",
 }

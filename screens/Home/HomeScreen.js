@@ -81,7 +81,7 @@ const HomeScreen = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
 
-            <View style={{marginTop: windowWidth * 0.04,width: windowWidth * 0.8, alignSelf: "center"}}>
+            <View style={{marginTop: windowWidth * 0.04,width: windowWidth * 0.85, alignSelf: "center"}}>
                <HomeSearch />
             </View>
 
@@ -127,11 +127,11 @@ const HomeScreen = ({ navigation }) => {
 
     const HomeButtonFilter = () => {
         return(
-            <TouchableOpacity onPress={() =>  sheetRef.current?.open()} style={{flexDirection: "row", alignItems: "center", gap: 8, borderRadius: 50, backgroundColor: "#ffffff10", paddingVertical: 8, paddingLeft: 8, paddingRight: 15,}}>
+            <TouchableOpacity onPress={() =>  sheetRef.current?.open()} style={{flexDirection: "row", alignItems: "center", gap: 8, borderRadius: 50, backgroundColor: "#ffffff10", paddingVertical: 8, paddingLeft: 8, paddingRight: 15, marginLeft: "auto"}}>
             <View style={{width: windowWidth * 0.06, height: windowWidth * 0.06, borderRadius: 50,backgroundColor: "#A29EF0", justifyContent: "center", alignItems:"center"}}>
               <Ionicons name='filter' color={COLORS.primary} size={15}/>
             </View>
-            <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(13)}}>Filters</Text>
+            <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.white, fontSize: getFontSize(13)}}>Filtres</Text>
           </TouchableOpacity>
         )
     }

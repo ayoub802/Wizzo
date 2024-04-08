@@ -158,7 +158,7 @@ const FichBon = ({ navigation }) => {
       <View style={{flex: 1,backgroundColor: "#fff", paddingBottom: windowWidth * 0.05}}>
          <View style={{width: windowWidth * 0.9, alignSelf: "center"}}>
            <View style={{marginTop: windowWidth * 0.1}}>
-              <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(24)}}>1 paire de lunettes achatée, la deuxième à 1€ de plus !</Text>
+              <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(27)}}>1 paire de lunettes achatée, la deuxième à 1€ de plus !</Text>
 
               <View style={{marginTop: windowWidth * 0.02}}>
                 <Text style={{fontFamily: FONTFAMILY.ABeeZee, color: COLORS.secondary, fontSize: getFontSize(16), lineHeight: 28}}>

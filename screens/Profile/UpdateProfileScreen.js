@@ -40,7 +40,7 @@ const UpdateProfileScreen = () => {
             <Button icon={({ color, size }) => (
                 <Feather name={"edit-3"} color={COLORS.primary} size={size} />
                 )}  mode="contained" style={{backgroundColor:  COLORS.primary_light1,paddingVertical: 0, paddingHorizontal: 8}} contentStyle={{height: 35}} textColor={COLORS.primary} labelStyle={{fontFamily: FONTFAMILY.ABeeZee, textTransform: "uppercase", fontSize: getFontSize(12),  height: 22}} onPress={() => console.log('Pressed')}>
-              Modified
+              Modifier
             </Button>
           </View>
         )
@@ -49,7 +49,7 @@ const UpdateProfileScreen = () => {
     <SafeAreaView style={{flex: 1, backgroundColor: "#fff"}}>
         <View style={{flex: 1,backgroundColor: "#fff"}}>
           <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false} nestedScrollEnabled={true}>
-            <HeaderProfile title={"Modifier le profile"} isDisplay={false}/>
+            <HeaderProfile title={"Modifier le profil"} isDisplay={false}/>
 
             <View style={{flex: 1, width: windowWidth * 0.9, alignSelf: "center", marginTop: windowWidth * 0.01}}>
                 <View style={{flex: 1}}>
@@ -102,7 +102,7 @@ const UpdateProfileScreen = () => {
           </ScrollView>
                 <View style={{justifyContent: "flex-end",marginBottom: windowWidth * 0.09, width: windowWidth * 0.6, alignSelf: "center"}}>
                     <TouchableOpacity style={{paddingHorizontal: windowWidth * 0.07,backgroundColor: "#EB5757",height: windowHeight * 0.075 ,paddingVertical: windowWidth * 0.032, borderRadius: 8, justifyContent: "center", alignItems: "center"}}>
-                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.white}}>Supprimer le compte</Text>
+                        <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(15), color: COLORS.white, textTransform: "uppercase"}}>Supprimer le compte</Text>
                     </TouchableOpacity>
                 </View>
         </View>

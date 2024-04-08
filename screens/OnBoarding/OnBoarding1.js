@@ -36,11 +36,11 @@ const OnBoardin1 = () => {
            <View></View>
            
            <View style={{flex: 1, justifyContent: 'center', alignItems: "center"}}>
-            <Image source={LogoWizzy} style={{width: windowWidth * .6, height: windowHeight * .35 ,objectFit: "cover"}}/>
+            <Image source={LogoWizzy} style={{width: windowWidth * .52, height: windowHeight * .33 ,objectFit: "cover"}}/>
             <View style={{marginTop: windowWidth * 0.04, marginBottom: windowWidth * 0.2}}>
-                <Text style={{color: COLORS.secondary, fontFamily: FONTFAMILY.ABeeZee, textAlign: "center", fontSize: getFontSize(54)}}>C’est parti !</Text>
+                <Text style={{color: COLORS.secondary, fontFamily: FONTFAMILY.ABeeZeeItalic, textAlign: "center", fontSize: getFontSize(54)}}>C’est parti !</Text>
                 <View style={{maxWidth: "50%", alignSelf: "center", marginTop: windowWidth * 0.02}}>
-                  <Text style={{color: COLORS.secondary, fontFamily: FONTFAMILY.ABeeZee,lineHeight: getFontSize(30) ,textAlign: "center", fontSize: getFontSize(15)}}>Entrez sur votre guide es bons plans locaux</Text>
+                  <Text style={{color: COLORS.secondary, fontFamily: FONTFAMILY.ABeeZee,lineHeight: getFontSize(30) ,textAlign: "center", fontSize: getFontSize(15)}}>Entrez sur votre guide des bons plans locaux</Text>
                 </View>
             </View>
            <View style={{width: "100%", maxWidth: windowWidth * 0.7, paddingBottom: windowWidth * 0.08}}>

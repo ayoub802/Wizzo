@@ -9,11 +9,15 @@ const TrieModal = ({isVisible, setIsVisible, resizeBox, top = 170,}) => {
   const options = [
     {
       id: 1,
-      title: 'Ascendent',
+      title: "Date d'ajout",
     },
     {
       id: 2,
-      title: 'Descendent',
+      title: "Date d'expiration",
+    },
+    {
+      id: 3,
+      title: "Distance",
     },
   ];
 
@@ -34,7 +38,7 @@ const TrieModal = ({isVisible, setIsVisible, resizeBox, top = 170,}) => {
             position: 'absolute',
             top: top,
             right: 30,
-            width: 120,
+            width: 150,
           },
         //    {
         //     transform: [{

@@ -14,7 +14,7 @@ const OnBoarding = () => {
     const fontScale = PixelRatio.getFontScale();
     const getFontSize = size => size / fontScale;
 
-    console.log("The Font Size => ", windowWidth * 0.2 , " The Pixel => ", getFontSize(20));
+    console.log("The Font Size => ", windowWidth * 0.4 , " The Pixel => ", windowHeight * 0.19);
 
   return (
     <View style={{flex: 1, backgroundColor: "#fff", position: "relative"}}>
@@ -35,8 +35,8 @@ const OnBoarding = () => {
            
            <View></View>
            
-           <View style={{flex: 1, justifyContent: 'center', alignItems: "center", gap: 100}}>
-            <Image source={LogoWizzy} style={{width: windowWidth * .6, height: windowHeight * .35 ,objectFit: "cover"}}/>
+           <View style={{flex: 1, justifyContent: 'center', alignItems: "center", gap: 90}}>
+            <Image source={LogoWizzy} style={{width: windowWidth * .52, height: windowHeight * .33 ,objectFit: "cover"}}/>
             <View>
                 <Text style={{color: COLORS.secondary, fontFamily: FONTFAMILY.ABeeZee, textAlign: "center", fontSize: getFontSize(24)}}>Bienvenue</Text>
                 <Text style={{color: COLORS.secondary, fontFamily: FONTFAMILY.ABeeZee,lineHeight: getFontSize(30) ,textAlign: "center", fontSize: getFontSize(15)}}>Sur votre guide des bons plans locaux</Text>

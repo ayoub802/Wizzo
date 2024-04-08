@@ -25,7 +25,7 @@ const BonPlanCard = ({item, navigation}) => {
                 <View style={{width: "60%"}}>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.primary}}>{item.title}</Text>
                     <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(11), color: COLORS.secondary, lineHeight: 18, marginVertical: 8}}>{item.address}</Text>
-                    <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(11), color: COLORS.secondary, lineHeight: 20}}>{item.remise}</Text>
+                    <Text style={{fontFamily: FONTFAMILY.ABeeZee, fontSize: getFontSize(14), color: COLORS.secondary, lineHeight: 20}}>{item.remise}</Text>
                 </View>
                 <View style={{flexDirection: "column", gap: 15}}>
                 <View style={{alignItems: "center"}}>

@@ -148,7 +148,7 @@ function MyTabs() {
         }
       </Tab.Screen>
       <Tab.Screen
-        name='BonPlans'
+        name='Bon plans'
         // component={BonPlan}
         options={{
           tabBarIcon: ({focused}) => (
